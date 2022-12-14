@@ -4,7 +4,7 @@ import Latam.com.bytebank.modelo.cliente.Cliente;
 
 public abstract class Cuenta {
 
-    protected double saldo;
+    private double saldo;
     private int agencia = 1;
     private int numero;
     private Cliente titular = new Cliente();
