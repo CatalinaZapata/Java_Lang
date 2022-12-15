@@ -1,5 +1,9 @@
 package Latam.com.bytebank.modelo;
-
+/**
+ * @
+ * @author Catalina
+ *
+ */
 public class CuentaAhorros extends Cuenta {
 	
 	public CuentaAhorros(int agencia, int numero) {
@@ -8,7 +12,8 @@ public class CuentaAhorros extends Cuenta {
 
 	@Override
 	public void deposita(double valor) {
-		this.saldo = this.saldo + valor;
+		this.setSaldo(this.getSaldo() + valor);
 	}
 
 }
+

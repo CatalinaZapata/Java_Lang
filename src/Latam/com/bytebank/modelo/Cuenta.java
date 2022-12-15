@@ -26,14 +26,14 @@ public abstract class Cuenta {
     public abstract void deposita(double valor);
 
     public void saca(double valor) throws SaldoInsuficienteException{
-    	if(this.saldo < valor) {
+    	if(this.getSaldo() < valor) {
     		throw new SaldoInsuficienteException("No tienes saldo");
     	}   //Es una buena practica declarar antes que nada los throws
-    	this.saldo -= valor;
+    	this.setSaldo(this.getSaldo() - valor);
     }
 
     public boolean transfiere(double valor, Cuenta destino) {
-        if(this.saldo >= valor) {
+        if(this.getSaldo() >= valor) {
             try {
 				this.saca(valor);
 			} catch (SaldoInsuficienteException e) {
@@ -82,5 +82,9 @@ public abstract class Cuenta {
     public static int getTotal() {
         return Cuenta.total;
     }
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
 }

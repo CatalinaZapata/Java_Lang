@@ -6,7 +6,7 @@ public class CuentaEspecial extends Cuenta {
 
 	@Override
 	public void deposita(double valor) {
-		super.saldo = 0.0;
+		setSaldo(0.0);
 		
 	}
 }
