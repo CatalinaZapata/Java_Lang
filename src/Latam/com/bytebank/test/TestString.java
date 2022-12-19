@@ -1,5 +1,7 @@
 package Latam.com.bytebank.test;
 
+import Latam.com.bytebank.modelo.CuentaAhorros;
+
 public class TestString {
 	public static void main(String[] args) {
 	String nombre = "Alura";
@@ -10,10 +12,21 @@ public class TestString {
 	nombre = nombre.concat(" cursos online");
 	nombre = nombre.toUpperCase();
 	nombre = nombre.toLowerCase();
+	
 	char letra = nombre.charAt(3);
 	int index = nombre.indexOf("e");
-	System.out.println("Despues del replace: " + nombre);
-	System.out.println(letra);
-	System.out.println(index);
-}
+	
+	Object cuenta = new CuentaAhorros(200, 300);
+	
+	printLine(nombre);
+	printLine(letra);
+	printLine(index);
+	printLine(new CuentaAhorros(200, 300));
+	
+	}
+	
+	public static void printLine(Object valor) {
+		System.out.println(valor.toString());
+	}
+	
 }

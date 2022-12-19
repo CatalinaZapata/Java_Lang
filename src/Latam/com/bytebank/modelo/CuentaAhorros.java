@@ -14,6 +14,12 @@ public class CuentaAhorros extends Cuenta {
 	public void deposita(double valor) {
 		this.setSaldo(this.getSaldo() + valor);
 	}
+	
+	@Override
+		public String toString() {
+			String cuenta = "Numero: " + this.getNumero() + ", Agencia:" + this.getAgencia();
+			return cuenta;
+		}
 
 }
 
